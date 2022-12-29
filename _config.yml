@@ -1,51 +1,82 @@
-baseurl: '/QWIRE/'
+# Site Settings
+lang: en
+title: Bulma Clean Theme
+tagline: Bulma Clean Theme
+email: your-email@domain.com
+description: >
+  The demo site for Bulma Clean Theme, made for Jekyll and GitHub pages websites
+baseurl: "/bulma-clean-theme"
+url: "https://www.csrhymes.com"
 permalink: pretty
-title: 'Jekyll Serif'
+#favicon: /path/to/favicon.png
+gh_sponsor: chrisrhymes
+#hide_share_buttons: true
+#theme_color: '#eeeeee'
+#fixed_navbar: top
+#direction: one of <ltr, rtl, auto>, default: ltr
 
-logo:
-  mobile: "images/logo/logo-mobile.svg"
-  mobile_height: "32px"
-  mobile_width: "32px"
-  desktop: "images/logo/logo.svg"
-  desktop_height: "32px"
-  desktop_width: "120px"
+paginate: 5
+paginate_path: "/blog/page:num"
 
-home: 
-  limit_services: 6
+# Disqus Comments
+disqus:
+  # Leave shortname blank to disable comments site-wide.
+  # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
+  # shortname: my_disqus_shortname
+  shortname: csrhymes
 
-collections:
-  services:
-    output: true
-    sort_by: weight
-  team:
-    output: true
-
-defaults:
-  - scope:
-      path: ""
-      type: "services"
-    values:
-      layout: "service"
-  - scope:
-      path: ""
-      type: "team"
-    values:
-      layout: "team"
-
-sass:
-  style: compressed # possible values: nested expanded compact compressed
 
 plugins:
-  - jekyll-environment-variables
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-seo-tag
+  - kramdown-parser-gfm
+  - jekyll-redirect-from
 
-exclude:
+exclude: 
   - Gemfile
+  - clean-theme.gemspec
   - Gemfile.lock
   - node_modules
   - vendor/bundle/
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
-  - LICENSE.md
-  - LICENSE
-  - README.md
+
+livereload: true
+
+sass:
+  style: compressed
+  source_dir: _sass
+
+#google_analytics: UA-code-here
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      show_sidebar: true
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      author: "C.S. Rhymes"
+      layout: post
+      image: https://via.placeholder.com/1200x800
+      show_sidebar: true
+
+markdown: kramdown
+highlighter: rouge
+
+footer_menu: example_footer_menu
+
+collections:
+  products: 
+    output: true
+    layout: product
+    image: https://via.placeholder.com/800x600
+    show_sidebar: false
