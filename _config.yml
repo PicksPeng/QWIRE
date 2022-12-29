@@ -1,16 +1,16 @@
 # Site Settings
 lang: en
-title: Bulma Clean Theme
-tagline: Bulma Clean Theme
-email: your-email@domain.com
+title: SimuQ
+tagline: A DSL for Quantum Simulation
+email: ypeng15@umd.edu
 description: >
-  The demo site for Bulma Clean Theme, made for Jekyll and GitHub pages websites
+  The site for SimuQ, a DSL for quantum simulation with Analog Compilation
 baseurl: "/QWIRE/"
-url: "https://www.csrhymes.com"
+#url: "https://www.csrhymes.com"
 permalink: pretty
 #favicon: /path/to/favicon.png
 gh_sponsor: chrisrhymes
-#hide_share_buttons: true
+hide_share_buttons: true
 #theme_color: '#eeeeee'
 #fixed_navbar: top
 #direction: one of <ltr, rtl, auto>, default: ltr
@@ -23,7 +23,8 @@ disqus:
   # Leave shortname blank to disable comments site-wide.
   # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
   # shortname: my_disqus_shortname
-  shortname: csrhymes
+  # shortname: csrhymes
+	shortname
 
 
 plugins:
@@ -58,7 +59,8 @@ defaults:
       path: ""
       type: "pages"
     values:
-      show_sidebar: true
+      #show_sidebar: true
+			show_sidebar: false
   -
     scope:
       path: ""
@@ -67,7 +69,8 @@ defaults:
       author: "C.S. Rhymes"
       layout: post
       image: https://via.placeholder.com/1200x800
-      show_sidebar: true
+			show_sidebar: true
+			#show_sidebar: false
 
 markdown: kramdown
 highlighter: rouge
