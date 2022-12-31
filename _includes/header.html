@@ -19,9 +19,9 @@
                     <div class="navbar-item has-dropdown is-hoverable {% if site.fixed_navbar == 'bottom' %} has-dropdown-up {% endif %}">
                         <a href="{{ item.link | relative_url }}" class="navbar-link">{{ item.name }}</a>
                         <div class="navbar-dropdown">
+													<div class="menu">
                           {% for subitem in item.dropdown %}
                           {% if subitem.dropdown %}
-													    <div class="menu">
 																<ul class="menu-list">
 																	<li> <a href="{{ subitem.link | relative_url }}" class="navbar-item">{{ subitem.name }}</a>
 																		<ul>
@@ -31,11 +31,11 @@
 																		</ul>
 																	</li>
 																</ul>
-															</div>
 													{% else %}
 													<a href="{{ subitem.link | relative_url }}" class="navbar-item">{{ subitem.name }}</a>
 													{% endif %}
 													{% endfor %}
+													</div>
 												</div>
                     </div>
                     {% else %}

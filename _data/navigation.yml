@@ -7,7 +7,7 @@
           link: /qs/heisenberg/
         - name: Jaynes-Cumming model
           link: /qs/jaynes-cumming/
-    - name: AAIS
+    - name: Abstract Analog Instruction Sets
       link: /aais/
       dropdown:
         - name: Rydberg atom arrays
