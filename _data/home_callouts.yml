@@ -1,11 +1,11 @@
-style: is-light
+style: fa-light
 items:
   - title: Model Quantum Systems
     subtitle: Program evolution in Hamiltonian Modeling Language
-    icon: fa-light fa-atom
+    icon: fa-atom
   - title: Describe Quantum Devices
     subtitle: Program Abstract Analog Instruction Sets in AAIS Specification Language
-    icon: fa-light fa-microchip
+    icon: fa-microchip
   - title: Pulse-level Compilation
     subtitle: Automatically generate pulse schedules according to hardware providers
-    icon: fa-light fa-wave-square
+    icon: fa-wave-square
