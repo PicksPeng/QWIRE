@@ -31,12 +31,12 @@
 																		</ul>
 																	</li>
 																</ul>
-																{% else %}
-																<a href="{{ subitem.link | relative_url }}" class="navbar-item">{{ subitem.name }}</a>
-																{% endif %}
-                            {% endfor %}
-													</div>
-                        </div>
+															</div>
+													{% else %}
+													<a href="{{ subitem.link | relative_url }}" class="navbar-item">{{ subitem.name }}</a>
+													{% endif %}
+													{% endfor %}
+												</div>
                     </div>
                     {% else %}
                     <a href="{{ item.link | relative_url }}" class="navbar-item {% if item.link == page.url %}is-active{% endif %}">{{ item.name }}</a>
