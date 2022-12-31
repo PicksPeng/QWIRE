@@ -1,15 +1,15 @@
 - name: Examples
-  items:
+  dropdown:
     - name: Quantum System
       link: /qs/
-      items:
+      dropdown:
         - name: Heisenberg model
           link: /qs/heisenberg/
         - name: Jaynes-Cumming model
           link: /qs/jaynes-cumming/
     - name: AAIS
       link: /aais/
-      items:
+      dropdown:
         - name: Rydberg atom arrays
           link: /aais/rydberg/
         - name: IBM superconducting machines
