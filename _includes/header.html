@@ -22,17 +22,16 @@
 													<div class="menu">
                             {% for subitem in item.dropdown %}
                                 {% if subitem.dropdown %}
-                                  <a href="{{ subitem.link | relative_url }}" class="menu-label">{{ subitem.name }}</a>
+                                  <a href="{{ subitem.link | relative_url }}" class="navbar-item">{{ subitem.name }}</a>
 																	<ul class="menu-list">
                                         {% for subsubitem in subitem.dropdown %}
 																				   <li><a href="{{ subsubitem.link | relative_url }}" class="navbar-item">{{ subsubitem.name }}</a></li>
 																	    	{% endfor %}
 																	</ul>
 																{% else %}
-																<a href="{{ subitem.link | relative_url }}" class="menu-label">{{ subitem.name }}</a>
+																<a href="{{ subitem.link | relative_url }}" class="navbar-item">{{ subitem.name }}</a>
 																{% endif %}
                             {% endfor %}
-														
 													</div>
                         </div>
                     </div>
