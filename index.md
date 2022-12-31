@@ -2,6 +2,7 @@
 title: SimuQ
 subtitle: A domain-specific language for quantum simulation with analog compilation
 layout: page
+hero_height: is-small
 callouts: home_callouts
 show_sidebar: true
 ---

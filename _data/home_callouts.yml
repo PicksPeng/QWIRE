@@ -1,4 +1,5 @@
-style: fa-light
+style: is-light
+height: is-small
 items:
   - title: Model Quantum Systems
     subtitle: Program evolution in Hamiltonian Modeling Language
