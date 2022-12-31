@@ -1,19 +1,20 @@
-- label: Example Menu
+- label: Examples
   items:
-    - name: Home
-      link: /
-    - name: Pages
-      link: /#
+    - name: Quantum System
+      link: /qs/
       items:
-        - name: Landing Page With Callouts
-          link: /landing/
-        - name: Products
-          link: /products/
-        - name: Sponsors Page
-          link: /sponsors/
-        - name: Image Gallery
-          link: /gallery/
-        - name: Recipe Page
-          link: /example-recipe/
-    - name: Blog
-      link: /blog/
+        - name: Heisenberg model
+          link: /qs/heisenberg/
+        - name: Jaynes-Cumming model
+          link: /qs/jaynes-cumming/
+    - name: AAIS
+      link: /aais/
+      items:
+        - name: Rydberg atom arrays
+          link: /aais/rydberg/
+        - name: IBM superconducting machines
+          link: /aais/ibm/
+        - name: Quantum circuits
+          link: /aais/circuit/
+    - name: Backend
+      link: /backend/
