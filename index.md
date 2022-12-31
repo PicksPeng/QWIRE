@@ -3,13 +3,15 @@ title: SimuQ
 subtitle: A domain-specific language for quantum simulation with analog compilation
 layout: page
 callouts: home_callouts
-show_sidebar: false
+show_sidebar: true
 ---
 
 SimuQ is a domain-specific language designed for quantum simulation problem on near-term quantum devices. SimuQ aims to reduce domain barriers in simulating Hamiltonian evolution on real quantum devices for users with minimal physics knowledge. We provide an open-source Python implementation of SimuQ, and a solver-based compilation framework generating pulse-level control code for multiple platforms of quantum devices include IBM's Qiskit Pulse for superconducting transmon qubit devices, QuEra's Bloqade for neutral atom arrays, and quantum circuits for other general machines.
 
-<a href="https://github.com/PicksPeng/SimuQ" class="btn btn-primary">View on GitHub</a>
-<a href="https://github.com/PicksPeng/SimuQ/archive/refs/heads/main.zip" class="btn btn-primary">Download .zip</a>
+<div class="has-text-centered">
+<a href="https://github.com/PicksPeng/SimuQ" class="button is-primary">View on GitHub</a>
+<a href="https://github.com/PicksPeng/SimuQ/archive/refs/heads/main.zip" class="button is-primary">Download .zip</a>
+</div>
 
 # Installation
 
