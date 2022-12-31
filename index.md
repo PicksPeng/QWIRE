@@ -3,52 +3,45 @@ title: SimuQ
 subtitle: A domain-specific language for quantum simulation with analog compilation
 layout: page
 callouts: home_callouts
-show_sidebar: true
+show_sidebar: false
 ---
 
-# SimuQ
+SimuQ is a domain-specific language designed for quantum simulation problem on near-term quantum devices. SimuQ aims to reduce domain barriers in simulating Hamiltonian evolution on real quantum devices for users with minimal physics knowledge. We provide an open-source Python implementation of SimuQ, and a solver-based compilation framework generating pulse-level control code for multiple platforms of quantum devices include IBM's Qiskit Pulse for superconducting transmon qubit devices, QuEra's Bloqade for neutral atom arrays, and quantum circuits for other general machines.
 
-This website showcases the options for the Bulma Clean theme. The theme is available as a ruby gem or can be used with GitHub pages. 
+<a href="https://github.com/PicksPeng/SimuQ" class="btn">View on GitHub</a>
+<a href="https://github.com/PicksPeng/SimuQ/archive/refs/heads/main.zip" class="btn">Download .zip</a>
 
-[![Gem Version](https://badge.fury.io/rb/bulma-clean-theme.svg)](https://badge.fury.io/rb/bulma-clean-theme)
-![Gem](https://img.shields.io/gem/dt/bulma-clean-theme.svg)
-![GitHub Repo stars](https://img.shields.io/github/stars/chrisrhymes/bulma-clean-theme?style=social)
+# Installation
 
-## Ruby Gem
+Download SimuQ from GitHub or above link.
 
-The ruby gem is available on the Ruby Gems website at the following location. [https://rubygems.org/gems/bulma-clean-theme](https://rubygems.org/gems/bulma-clean-theme).
+We have tested our implementation with `Python 3.9` and the following packages:
+* `NetworkX 2.8.7`
+* `NumPy 1.23.4`
+* `SciPy 1.9.3`
 
-## GitHub Pages
+To generate quantum circuits in Qiskit, IBM machine AAIS for specific machines, or programs in Qiskit Pulses, the following packages are also required:
+* `Qiskit 0.39.0`
+* `Qiskit-Terra 0.22.0`
 
-The theme can be used with GitHub Pages by setting the `remote_theme` in your Jekyll sites `_config.yml`
+The generated Bloqade programs are tested in `Julia 1.7.2` with `Bloqade 0.1.13`.
 
-```yml
-remote_theme: chrisrhymes/bulma-clean-theme
+# Documentation
+
+For full instructions, please see the [Documentation](/QWIRE/docs/)
+
+# Citations
+
+If you are using SimuQ in your work, please cite:
+```
+@article{peng2023simuq,
+  title         = {SimuQ: A Domain-Specific Language for Quantum Simulation with Analog Compilation}
+  author        = {Peng, Yuxiang and Young, Jacob and Liu, Pengyu and Wu, Xiaodi},
+  year          = {2023},
+  month         = jan,
+}
 ```
 
-## Documentation
+# Acknowledgements
 
-For full instructions, please see the [Documentation](/bulma-clean-theme/docs/)
-
-## Page Layouts
-
-This demo site showcases the available page layout options. 
-
-* Sidebar
-* Menubar
-* Tabs
-* Footer
-* Hero
-* Contents
-* Landing Page With Callouts
-* Sponsors Page
-* Image Gallery
-* Recipe Page
-* Blog
-* Post
-
-## Supported By JetBrains
-
-JetBrains have kindly provided an Open Source licence to aid in the future development of Bulma Clean Theme.
-
-[![JetBrains](img/jetbrains-variant-4.svg)](https://www.jetbrains.com/?from=bulma-clean-theme)
+This project was partially funded by the U.S. Department of Energy, Office of Science, Office of Advanced Scientific Computing Research, Quantum Testbed Pathfinder Program under Award Number DE-SC0019040, Air Force Office of Scientific Research under award number FA9550-21-1-0209, and  the U.S. National Science Foundation grant CCF-1942837 (CAREER).
