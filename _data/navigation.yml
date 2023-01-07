@@ -1,23 +1,24 @@
 - name: Examples
+  link: /examples/
   dropdown:
     - name: Quantum System
-      link: /qs/
+      link: /examples/qs/
       dropdown:
         - name: Heisenberg model
-          link: /qs/heisenberg/
+          link: /examples/qs/heisenberg/
         - name: Jaynes-Cumming model
-          link: /qs/jaynes-cumming/
+          link: /examples/qs/jaynes-cumming/
     - name: Abstract Analog Instruction Sets
-      link: /aais/
+      link: /examples/aais/
       dropdown:
         - name: Rydberg atom arrays
-          link: /aais/rydberg/
+          link: /examples/aais/rydberg/
         - name: IBM superconducting machines
-          link: /aais/ibm/
+          link: /examples/aais/ibm/
         - name: Quantum circuits
-          link: /aais/circuit/
+          link: /examples/aais/circuit/
     - name: Backend
-      link: /backend/
+      link: /examples/backend/
 - name: Documentation
   link: /docs/
 - name: Blog
