@@ -13,5 +13,5 @@ We present several examples of SimuQ covering many interesting quantum systems a
 
 ## [Abstract Analog Instruction Sets]({% link examples/aais.md %})
 
-## [Backends]({% link examples/backends.md %})
+## [Backends]({% link examples/backend.md %})
 
