@@ -7,11 +7,11 @@ show_sidebar: false
 
 We present several examples of SimuQ covering many interesting quantum systems and devices.
 
-## [Quantum Systems]({% link examples/qs/ %})
+## [Quantum Systems]({% link examples/qs.md %})
 
 * Heisenberg model ({% link examples/qs/heis.md %})
 
-## [Abstract Analog Instruction Sets]({% link examples/aais/ %})
+## [Abstract Analog Instruction Sets]({% link examples/aais.md %})
 
-## [Backends]({% link examples/backends/ %})
+## [Backends]({% link examples/backends.md %})
 
