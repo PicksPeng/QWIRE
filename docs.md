@@ -1,10 +1,9 @@
 ---
 layout: page
-title: Docs
+title: Documentation
 menubar: docs_menu
 show_sidebar: false
 ---
 
-Bulma Clean Theme has many features available. The documentation has been spit into categories to make it easier to navigate through the various features. 
+The documentation of SimuQ is presented here. Find out the online API documentation of classes and methods of SimuQ in [SimuQ Online Docs]({{ 'refs/index.html' | relative_url }})
 
-Find out how to install Bulma Clean Theme in your Jekyll project in the [Installation](/bulma-clean-theme/docs/getting-started/installation/) section.

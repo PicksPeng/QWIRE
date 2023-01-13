@@ -1,7 +1,7 @@
 ---
 title: Examples
 subtitle: Examples of SimuQ programs for quantum systems.
-layout: default
+layout: page
 show_sidebar: true
 ---
 
@@ -9,12 +9,14 @@ show_sidebar: true
 We present several examples of SimuQ covering many interesting quantum systems and devices.
 </span>
 
-[# Quantum Systems]({{ 'examples/qs.md' | relative_url }})
 
-[* Heisenberg model]({{ 'examples/qs/heisenberg.md' | relative_url }})
+
+## [Quantum Systems]({{ 'examples/qs.md' | relative_url }})
+
+* [Heisenberg model]({{ 'examples/qs/heisenberg.md' | relative_url }})
 * Jaynes-Cumming model
 
-[# Abstract Analog Instruction Sets]({{ 'examples/aais.md' | relative_url }})
+## [Abstract Analog Instruction Sets]({{ 'examples/aais.md' | relative_url }})
 
-[# Backends]({{ 'examples/backend.md' | relative_url }})
+## [Backends]({{ 'examples/backend.md' | relative_url }})
 
