@@ -8,10 +8,10 @@ show_sidebar: false
 The quantum Heisenberg model, developed by Werner Heisenberg, is a statistical mechanical model used in the study of critical points and phase transitions of magnetic systems, in which the spins of the magnetic systems are treated quantum mechanically. 
 
 The Hamiltonian of a Heisenberg model with n qubits can be described as 
-$$\hat{H}=-\frac{1}{2} \sum_{j=1}^N\left(J_x \sigma_j^x \sigma_{j+1}^x+J_y \sigma_j^y \sigma_{j+1}^y+J_z \sigma_j^z \sigma_{j+1}^z+h \sigma_j^z\right)$$
-where $J_x, J_y$ and $J_z$ are real-valued coupling constants. This Hamiltonian can be described by the following HML code:
+\[H=-\frac{1}{2} \sum_{j=1}^N\left(J_x \sigma_j^x \sigma_{j+1}^x+J_y \sigma_j^y \sigma_{j+1}^y+J_z \sigma_j^z \sigma_{j+1}^z+h \sigma_j^z\right)\]
+where \(J_x, J_y\) and \(J_z\) are real-valued coupling constants. This Hamiltonian can be described by the following HML code:
 
-```Python
+```python
 import numpy as np
 from simuq.qsystem import QSystem
 from simuq.environment import qubit

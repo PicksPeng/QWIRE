@@ -74,6 +74,7 @@ defaults:
 
 markdown: kramdown
 highlighter: rouge
+  input: GFM
 
 footer_menu: example_footer_menu
 
