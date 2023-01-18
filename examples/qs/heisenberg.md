@@ -13,21 +13,21 @@ where $$J_x, J_y$$ and $$J_z$$ are real-valued coupling constants. This Hamilton
 
 ```python
 import numpy as np
-from simuq.qsystem import QSystem
 from simuq.environment import qubit
+from simuq.qsystem import QSystem
 
-def Hensenberg_model(n_qubits,Jx,Jy,Jz,h,T):
+
+def Hensenberg_model(n_qubits, Jx, Jy, Jz, h, T):
     qs = QSystem()
     ql = [qubit(qs) for i in range(n_qubits)]
-    link = [(i,i+1) for i in range(n-1)]
+    link = [(i, i + 1) for i in range(n_qubits - 1)]
     ham = 0
-    for (q0, q1) in link :
-        ham -= Jx*ql[q0].X * ql[q1].X/2
-        ham -= Jy*ql[q0].Y * ql[q1].Y/2
-        ham -= Jz*ql[q0].Z * ql[q1].Z/2
-    for i in range(n) :
-        ham -= ql[i].X/2
+    for (q0, q1) in link:
+        ham -= Jx * ql[q0].X * ql[q1].X / 2
+        ham -= Jy * ql[q0].Y * ql[q1].Y / 2
+        ham -= Jz * ql[q0].Z * ql[q1].Z / 2
+    for i in range(n):
+        ham -= ql[i].X / 2
     qs.add_evolution(ham, T)
     return qs
-
 ```
