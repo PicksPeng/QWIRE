@@ -14,24 +14,20 @@ SimuQ is a domain-specific language designed for quantum simulation problem on n
 <a href="https://github.com/PicksPeng/SimuQ/archive/refs/heads/main.zip" class="button is-primary">Download .zip</a>
 </div>
 
-# Installation
+# Supported Backends
 
-Download SimuQ from GitHub or above link.
+We currently support the following backends:
+* Rydberg atom arrays: Bloqade and QuEra's machines via AWS.
+* Superconducting transmon qubit systems: Qiskit Pulse for IBM machines.
+* Quantum circuits: Qiskit and AWS Braket.
 
-We have tested our implementation with `Python 3.9` and the following packages:
-* `NetworkX 2.8.7`
-* `NumPy 1.23.4`
-* `SciPy 1.9.3`
+An illustration of SimuQ capability:
 
-To generate quantum circuits in Qiskit, IBM machine AAIS for specific machines, or programs in Qiskit Pulses, the following packages are also required:
-* `Qiskit 0.39.0`
-* `Qiskit-Terra 0.22.0`
-
-The generated Bloqade programs are tested in `Julia 1.7.2` with `Bloqade 0.1.13`.
+![SimuQ Illustration](img/simuq-illustration.svg)
 
 # Documentation
 
-For full instructions, please see the [Documentation](/QWIRE/docs/)
+For full instructions, please check [Documentation](/QWIRE/docs/)
 
 # Citations
 
