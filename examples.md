@@ -14,7 +14,7 @@ We present several examples of SimuQ covering many interesting quantum systems a
 ## [Quantum Systems]({{ 'examples/qs/' | relative_url }})
 
 * [Heisenberg model]({{ 'examples/qs/heisenberg/' | relative_url }})
-* Jaynes-Cumming model
+* [Jaynes-Cumming model]({{ 'examples/qs/jaynes-cumming/' | relative_url }})
 
 ## [Abstract Analog Instruction Sets]({{ 'examples/aais/' | relative_url }})
 

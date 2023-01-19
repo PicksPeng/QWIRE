@@ -2,40 +2,48 @@
 layout: page
 menubar: docs_menu
 title: Installation
-subtitle: Getting Started
+subtitle: Prerequisites and steps to install SimuQ
 show_sidebar: false
 toc: true
 ---
 
-## Use the Gem with Jekyll
+## Download
 
-**This theme requires Jekyll 3.9 to be compatible with GitHub Pages.**
+Download SimuQ from [GitHub](https://github.com/PicksPeng/SimuQ) or [.zip](https://github.com/PicksPeng/SimuQ/archive/refs/heads/main.zip).
 
-Add this line to your Jekyll site's `Gemfile`:
+## Prerequisites
 
-```ruby
-gem "bulma-clean-theme"
+We have tested our implementation with `Python 3.9` and the following packages:
+* `NetworkX 2.8.7`
+* `NumPy 1.23.4`
+* `SciPy 1.9.3`
+
+To generate quantum circuits in Qiskit, IBM machine AAIS for specific machines, or programs in Qiskit Pulses, the following packages are also required:
+* `Qiskit 0.39.0`
+* `Qiskit-Terra 0.22.0`
+
+The generated Bloqade programs are tested in `Julia 1.7.2` with `Bloqade 0.1.13`.
+
+## Installation
+
+Since Qiskit 0.39.0 requires Python version >= 3.9, if you want to use qiskit-related features, please update your Python to at least 3.9.
+
+### Linux
+
+To install the prerequisites, run in terminal:
+```
+pip install networkx numpy scipy
 ```
 
-And add this line to your Jekyll site's `_config.yml`:
-
-```yaml
-theme: bulma-clean-theme
+Furthermore, to run qiskit-related code, run in terminal:
+```
+pip install qiskit qiskit-terra
 ```
 
-And then execute:
+For the installation of Julia, please refer to [Julialang website](https://julialang.org/downloads/platform/)
 
-    $ bundle
+To install Bloqade, input `]` in Julia to enter package manager, and run `add Bloqade`.
 
-Or install it yourself as:
+### Other platforms
 
-    $ gem install bulma-clean-theme
-
-## GitHub Pages
-
-If you are deploying to GitHub pages, then you can also install the [GitHub Pages gem](https://github.com/github/pages-gem) and use `remote_theme` instead of `theme` in your `_config.yml`.
-
-```yaml
-# With GitHub Pages Gem
-remote_theme: chrisrhymes/bulma-clean-theme
-```
+To be added.
