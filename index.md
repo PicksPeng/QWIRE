@@ -27,7 +27,7 @@ An illustration of SimuQ capability:
 
 # Documentation
 
-For full instructions, please check [Documentation](/QWIRE/docs/)
+For full instructions, please check [Documentation](/QWIRE/docs/).
 
 # Citations
 
@@ -40,7 +40,3 @@ If you are using SimuQ in your work, please cite:
   month         = jan,
 }
 ```
-
-# Acknowledgements
-
-This project was partially funded by the U.S. Department of Energy, Office of Science, Office of Advanced Scientific Computing Research, Quantum Testbed Pathfinder Program under Award Number DE-SC0019040, Air Force Office of Scientific Research under award number FA9550-21-1-0209, and  the U.S. National Science Foundation grant CCF-1942837 (CAREER).
