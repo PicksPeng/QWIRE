@@ -11,14 +11,15 @@
     - name: Abstract Analog Instruction Sets
       link: /examples/aais/
       dropdown:
-        - name: Rydberg atom arrays
+        - name: Rydberg AAIS
           link: /examples/aais/rydberg/
-        - name: IBM superconducting machines
-          link: /examples/aais/ibm/
-        - name: Quantum circuits
-          link: /examples/aais/circuit/
+        - name: Heisenberg-like AAIS
+          link: /examples/aais/heisenberg
     - name: Backend
       link: /examples/backend/
+      dropdown:
+        - name: IBM backend
+          link: /examples/backend/ibm
 - name: Documentation
   link: /docs/
 - name: Posts

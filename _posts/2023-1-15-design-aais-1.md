@@ -20,7 +20,7 @@ The atoms have multiple energy levels and scientists particularly chose the mini
 
 Assume the positions of the atoms are $$\{(x_j, y_j)\}$$ (unit: $$\mu m$$). Between two atoms indexed by $$j$$ and $$k$$, there is an interaction called [van der Waals force](https://en.wikipedia.org/wiki/Van_der_Waals_force) attracting the two atoms. The effect of this force can be expressed as $$
 \frac{C_6}{d^6(j, k)}\hat{n}_j\hat{n}_k.
-$$ Here $d(j, k)=\sqrt{(x_j-x_k)^2+(y_j-y_k)^2}$ is the distance between them, $$\hat{n}_j$$ is the number operator of the atom $$j$$, and $$C_6$$  is the Rydberg interaction constant. Most current devices do not support moving atoms after experiment set-up.
+$$ Here $$d(j, k)=\sqrt{(x_j-x_k)^2+(y_j-y_k)^2}$$ is the distance between them, $$\hat{n}_j$$ is the number operator of the atom $$j$$, and $$C_6$$  is the Rydberg interaction constant. Most current devices do not support moving atoms after experiment set-up.
 
 The atoms are driven by laser beams targeting them. Current QuEra devices have global laser control: all atoms are targetted by the same laser beam configuration. Future Rydberg atom array devices may have local laser control: the laser configurations are customizable for different atoms. For the $$j$$-th laser targeting atom $$j$$, there are three independent configurable parameters: detuning $$\Delta_j$$, amplitude $$\Omega_j$$, and phase $$\phi_j$$. These parameters are real functions of time. The effect of this laser beam is characterized by Hamiltonian $$
 -\Delta_j\hat{n}_j+\frac{\Omega_j}{2}(\cos(\phi_j)X_j-\sin(\phi_j)Y_j).

@@ -1,7 +1,7 @@
 ---
 title: Quantum Systems
 subtitle: Programming quantum systems in HML
-layout: default
+layout: page
 show_sidebar: false
 ---
 

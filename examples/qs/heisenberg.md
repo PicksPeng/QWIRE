@@ -1,7 +1,7 @@
 ---
 title: Heisenberg model
 subtitle: Programming Heisenberg model in HML
-layout: default
+layout: page
 show_sidebar: false
 ---
 
@@ -17,7 +17,7 @@ from simuq.environment import qubit
 from simuq.qsystem import QSystem
 
 
-def Hensenberg_model(n_qubits, Jx, Jy, Jz, h, T):
+def Heisenberg_model(n_qubits, Jx, Jy, Jz, h, T):
     qs = QSystem()
     ql = [qubit(qs) for i in range(n_qubits)]
     link = [(i, i + 1) for i in range(n_qubits - 1)]

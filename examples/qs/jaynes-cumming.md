@@ -1,7 +1,7 @@
 ---
 title: Jaynes-Cumming model
 subtitle: Programming Jaynes-Cumming model in HML
-layout: default
+layout: page
 show_sidebar: false
 ---
 
@@ -13,17 +13,16 @@ where $$\omega_c, \omega_a$$ and $$\Omega$$ are real-valued coupling constants. 
 
 ```python
 import numpy as np
-from simuq.environment import qubit
+from simuq.environment import qubit, boson
 from simuq.qsystem import QSystem
 
 
-def Hensenberg_model(n_qubits, omega_c, omega_a, Omega, T):
+def JC_model(omega_c, omega_a, Omega, T):
     qs = QSystem()
-    ql = [qubit(qs) for i in range(n_qubits)]
-    ham = 0
-    ham -= Jx * ql[q0].X * ql[q1].X / 2
-    ham -= Jy * ql[q0].Y * ql[q1].Y / 2
-    ham -= Jz * ql[q0].Z * ql[q1].Z / 2
+		q, bos = qubit(qs), boson(qs)
+
+		ham = omega_c * bos.c * bos.a + omega_a / 2 * q.Z + Omega / 2 * (bos.a * (q.X - 1j * q.Y) + bos.c * (q.X + 1j * q.Y))
+
     qs.add_evolution(ham, T)
     return qs
 ```

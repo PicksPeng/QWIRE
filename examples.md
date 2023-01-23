@@ -18,5 +18,9 @@ We present several examples of SimuQ covering many interesting quantum systems a
 
 ## [Abstract Analog Instruction Sets]({{ 'examples/aais/' | relative_url }})
 
+* [Rydberg AAIS]({{ 'examples/aais/rydberg/' | relative_url }})
+* [Heisenberg-like AAIS]({{ 'examples/aais/heisenberg/' | relative_url }})
+
 ## [Backends]({{ 'examples/backend/' | relative_url }})
 
+* [IBM backend]({{ 'examples/backend/ibm/' | relative_url }})
