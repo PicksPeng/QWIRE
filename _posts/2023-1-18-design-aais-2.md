@@ -23,3 +23,45 @@ Qubit control is accomplished through the use of signal lines, dedicated signal 
 This format for single-qubit drive operations gives rise to an important feature of superconducting qubits- the free Z rotation. The phase of the drive signal relative to the qubit determines whether an X or Y rotation is performed- the same thing accomplished by rotating a qubit about its Z axis. Furthermore, because measurements are performed in the Z basis, the global phase of a given qubit is irrelevant. Updating the phase used when sending drive signals to the qubit is equivalent to performing a single-qubit Z rotation. Tracking this phase shift in software instead of driving the qubit allows for instantaneous, parametrized, error-free Z rotations.
 
 For multi-qubit entangling lines, two coupled fixed-frequency transmon qubits are entangled through the cross-resonance interaction. This interaction is induced by driving one qubit at the other qubit's frequency, resulting in a Hamiltonian of the form $$H_{CR} = g_{CR} s(t) (\nu \sigma_x \otimes I + \mu I \otimes \sigma_x + \sigma_z \otimes \sigma_x)$$, where $$g_{CR}$$, $$\nu$$, and $$\mu$$ are interaction strength constants, $$s(t)$$ is the signal envelope, and the tensor product indicates Hamiltonian terms affecting both systems. A ZX polyrotation may be extracted from this Hamiltonian through the careful application of multiple drive signals on both qubits, resulting in an effective Hamiltonian of $$H_{eff} = g_{CR} \sigma_z \otimes \sigma_x$$.
+
+## Initializing the Machine and Extracting Backend Details
+
+We begin by creating a machine object with some number of qubits-- in this case, 27.
+
+```python
+mach = QMachine()
+n = 27
+ql = [qubit(mach) for i in range(n)]
+```
+
+We can extract qubit coupling information directly from the IBM backend targeted by our AAIS.
+
+```python
+IBMQ.load_account()
+        
+provider = IBMQ.get_provider(hub=<your_hub>, group=<your_group>, project=<your_project>)
+backend = provider.get_backend(<27_qubit_ibm_backend>)
+
+control_line_by_system = {tuple(v['operates']['qubits']): int(k.strip("u")) for k, v in backend.configuration().channels.items() if v['purpose'] == 'cross-resonance'}
+
+link = list(self.control_line_by_system.keys())
+print("New list of connected pairs for IBM system: " + str(link))
+```
+
+## Building Single-Qubit Signal Lines
+
+For each qubit on our machine, we build a single-qubit X-Y drive interaction in the format described above, and we define a derived Z instruction implemented in software via the free Z interaction.
+
+```python
+for i in range(n) :
+    L = SignalLine(mach)
+    
+    ins1 = Instruction(L, 'native', 'L{}_X_Y'.format(i))
+    amp = LocalVar(ins1)
+    phase = LocalVar(ins1)
+    ins1.set_ham(amp * (Expression.cos(phase) * ql[i].X + Expression.sin(phase) * ql[i].Y))
+    
+    ins2 = Instruction(L, 'derived', 'L{}_Z'.format(i))
+    amp = LocalVar(ins2)
+    ins2.set_ham(amp * ql[i].Z)
+```
