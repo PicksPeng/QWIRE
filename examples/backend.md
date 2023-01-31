@@ -15,4 +15,4 @@ SimuQ solver generates abstract schedules that reproduce the target Hamiltonian.
 
 The first component of a backend is a scheduler that settles down instruction executions' start and end times according to the durations of their implementations. It specifies the sequence of instructions executed on a signal line (including idle intervals). This is done by importing the implementation details from the machine and running a topological sort of the temporal graph. The resulting schedule is called concrete schedule.
 
-Then a pulse scheduler transpile the concrete schedule into a pulse schedule by transpiling each instruction call with the pulse implementation of the instruction.
+Then a pulse scheduler transpiles the concrete schedule into a pulse schedule by transpiling each instruction call with the pulse implementation of the instruction.
