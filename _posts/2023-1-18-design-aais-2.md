@@ -9,5 +9,9 @@ published: true
 author: Jacob Young
 ---
 
-We introduce the design ideas of AAIS from the viewpoint of a device provider. In this tutorial, we briefly discuss the superconducting machines with transmon qubit and present how to build an AAIS based on machines.
+We introduce the design ideas of an AAIS from the viewpoint of a device provider. In this tutorial, we briefly discuss superconducting machines with fixed-frequency transmon qubits and present how to build an AAIS based on these machines.
 
+
+## Superconducting Qubits
+
+Superconducting circuits are a promising platform for scalable quantum computing. Carefully constructed mesoscopic circuits can be designed to have quantum behavior, allowing easier exploitation of quantum effects for quantum computation. A superconducting LC oscillator can be quantized in terms of the phase and charge moving within the circuit, and by replacing the inductor with a Josephson Junction, a component serving as a nonlinear inductor, the oscillator becomes anharmonic, separating out the lower two energy levels of the oscillation to use as the computational basis of a qubit. Treating each oscillator as a two-level system yields the approximate qubit Hamiltonian $$H = \omega_z \frac{\sigma_z}{2}$$
