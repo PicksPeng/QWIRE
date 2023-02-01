@@ -6,7 +6,7 @@
       link: /docs/getting-started/qsystem/
     - name: Compile to Qiskit Pulse Schedules
       link: /docs/getting-started/compilation/
-- label: API Documentation
+- label: API References
   items:
     - name: SimuQ Online Docs
       link: /refs/index.html
