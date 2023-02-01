@@ -27,3 +27,18 @@ AAISs are designed specifically for different systems. Nevertheless, there are s
 * The instructions should be expressive enough for most target Hamiltonians.
 * The instructions should be closely related to the physics effect of the pulses.
 * Rarely used instructions should be avoided.
+
+## Supported Devices and Their AAIS
+
+Currently we designed two AAIS:
+* [Rydberg AAIS]({{ 'examples/aais/rydberg/' | relative_url }}): for QuEra's Rydberg atom arrays.
+* [Heisenberg-like AAIS]({{ 'examples/aais/rydberg/' | relative_url }}): for IBM's superconducting qubit systems and IonQ's trapped ion systems.
+
+SimuQ generates code directly runnable for these devices according to the API provided by hardware providers:
+* QuEra's machines: through Amazon Braket or QuEra Bloqade.
+* IBM's machines: through IBM Quantum.
+* IonQ's machines: through Amazon Braket (currently no pulse-level control).
+
+We are working on the supports of Rigetti's superconducting devices and Oxford Quantum Circuits through AWS Braket.
+
+Current AAISs model the programmability of machines we have access to. Nevertheless, the abstraction of AAIS readily captures programmability of most quantum devices in the near future. With better devices in the future and more complicated target system to simulate, one can design more complex AAIS within the scope of expresiveness of AAIS specification language. 

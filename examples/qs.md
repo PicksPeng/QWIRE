@@ -16,3 +16,8 @@ The structure of a quantum evolution written in HML is:
 4. Expressions composed by site operators.
 
 Then an evolution consists of several segments of evolution under time-independent Hamiltonian.
+
+## Several Example Systems
+
+* [Heisenberg model]({{ 'examples/qs/heisenberg/' | relative_url }})
+* [Jaynes-Cumming model]({{ 'examples/qs/jaynes-cumming/' | relative_url }})

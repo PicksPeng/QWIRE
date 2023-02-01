@@ -17,9 +17,9 @@ SimuQ is a domain-specific language designed for quantum simulation problem on n
 # Supported Backends
 
 We currently support the following backends:
-* Rydberg atom arrays: Bloqade and QuEra's machines via AWS.
+* Rydberg atom arrays: Bloqade and QuEra's machines via Amazon Braket.
 * Superconducting transmon qubit systems: Qiskit Pulse for IBM machines.
-* Quantum circuits: Qiskit and AWS Braket.
+* Quantum circuits: Qiskit and Amazon Braket.
 
 An illustration of SimuQ capability:
 

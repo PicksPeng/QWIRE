@@ -23,4 +23,5 @@ We present several examples of SimuQ covering many interesting quantum systems a
 
 ## [Backends]({{ 'examples/backend/' | relative_url }})
 
+* [QuEra backend]({{ 'examples/backend/quera/' | relative_url }})
 * [IBM backend]({{ 'examples/backend/ibm/' | relative_url }})
